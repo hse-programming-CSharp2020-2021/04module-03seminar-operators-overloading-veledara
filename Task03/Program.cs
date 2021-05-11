@@ -33,11 +33,15 @@ namespace Task03
 
         public static implicit operator Clock(int minute)
         {
+            if (minute <= 0)
+            {
+                throw new ArgumentException();
+            }
             return new Clock { Hours = minute / 60 };
         }
         public static explicit operator int(Clock clock)
         {
-            if (clock.Hours < 0)
+            if (clock.Hours <= 0)
             {
                 throw new ArgumentException();
             }

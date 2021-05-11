@@ -1,0 +1,304 @@
+{
+  "tests": [
+    {
+      "name": "01Task. 01Test",
+      "setup": "csc Task01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "10 10",
+      "output": "20",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "01Task. 02Test",
+      "setup": "csc Task01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "50 100",
+      "output": "150",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "01Task. 03Test",
+      "setup": "csc Task01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "-10 10",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "01Task. 04Test",
+      "setup": "csc Task01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "10 -10",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "01Task. 05Test",
+      "setup": "csc Task01/Program.cs",
+      "run": "mono Program.exe",
+      "input": "-10 -10",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "02Task. 01Test",
+      "setup": "csc Task02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "10 10\r\n200 20",
+      "output": "200 20\r\n210 30",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "02Task. 02Test",
+      "setup": "csc Task02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "-10 10\r\n200 20",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "02Task. 03Test",
+      "setup": "csc Task02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "-1 19\r\n20 19",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "02Task. 04Test",
+      "setup": "csc Task02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "50 20\r\n100 5",
+      "output": "100 5\r\n150 25",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "02Task. 05Test",
+      "setup": "csc Task02/Program.cs",
+      "run": "mono Program.exe",
+      "input": "0 -10\r\n10 10",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "03Task. 01Test",
+      "setup": "csc Task03/Program.cs",
+      "run": "mono Program.exe",
+      "input": "650\r\n10",
+      "output": "10\r\n600",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "03Task. 02Test",
+      "setup": "csc Task03/Program.cs",
+      "run": "mono Program.exe",
+      "input": "10\r\n7",
+      "output": "0\r\n420",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "03Task. 03Test",
+      "setup": "csc Task03/Program.cs",
+      "run": "mono Program.exe",
+      "input": "-50\r\n50",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "03Task. 04Test",
+      "setup": "csc Task03/Program.cs",
+      "run": "mono Program.exe",
+      "input": "10\r\n-10",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "03Task. 05Test",
+      "setup": "csc Task03/Program.cs",
+      "run": "mono Program.exe",
+      "input": "400\r\n4",
+      "output": "6\r\n240",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "04Task. 01Test",
+      "setup": "csc Task04/Program.cs",
+      "run": "mono Program.exe",
+      "input": "50\r\n50",
+      "output": "10,00\r\n122,00",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "04Task. 02Test",
+      "setup": "csc Task04/Program.cs",
+      "run": "mono Program.exe",
+      "input": "30\r\n50",
+      "output": "-1,11\r\n122,00",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "04Task. 03Test",
+      "setup": "csc Task04/Program.cs",
+      "run": "mono Program.exe",
+      "input": "10\r\n60",
+      "output": "-12,22\r\n140,00",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "04Task. 04Test",
+      "setup": "csc Task04/Program.cs",
+      "run": "mono Program.exe",
+      "input": "15\r\n90",
+      "output": "-9,44\r\n194,00",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "04Task. 05Test",
+      "setup": "csc Task04/Program.cs",
+      "run": "mono Program.exe",
+      "input": "9\r\n8",
+      "output": "-12,78\r\n46,40",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "05Task. 01Test",
+      "setup": "csc Task05/Program.cs",
+      "run": "mono Program.exe",
+      "input": "10\r\n100",
+      "output": "8,77\r\n114,00",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "05Task. 02Test",
+      "setup": "csc Task05/Program.cs",
+      "run": "mono Program.exe",
+      "input": "5\r\n-9",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "05Task. 03Test",
+      "setup": "csc Task05/Program.cs",
+      "run": "mono Program.exe",
+      "input": "5\r\n90",
+      "output": "4,39\r\n102,60",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "05Task. 04Test",
+      "setup": "csc Task05/Program.cs",
+      "run": "mono Program.exe",
+      "input": "12\r\n0",
+      "output": "10,53\r\n0,00",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "05Task. 05Test",
+      "setup": "csc Task05/Program.cs",
+      "run": "mono Program.exe",
+      "input": "-7\r\n-7",
+      "output": "error",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "06Task. 01Test",
+      "setup": "csc Task06/Program.cs",
+      "run": "mono Program.exe",
+      "input": "1/3\r\n1/6",
+      "output": "1/2\r\n1/6\r\n1/18\r\n2",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "06Task. 02Test",
+      "setup": "csc Task06/Program.cs",
+      "run": "mono Program.exe",
+      "input": "1/4\r\n1/4",
+      "output": "1/2\r\n0\r\n1/16\r\n1",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "06Task. 03Test",
+      "setup": "csc Task06/Program.cs",
+      "run": "mono Program.exe",
+      "input": "1/8\r\n-1/8",
+      "output": "0\r\n1/4\r\n-1/64\r\n-1",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "06Task. 04Test",
+      "setup": "csc Task06/Program.cs",
+      "run": "mono Program.exe",
+      "input": "0/4\r\n3/4",
+      "output": "3/4\r\n-3/4\r\n0\r\n0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "06Task. 05Test",
+      "setup": "csc Task06/Program.cs",
+      "run": "mono Program.exe",
+      "input": "1/4\r\n0/4",
+      "output": "1/4\r\n1/4\r\n0\r\nzero",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}

@@ -46,7 +46,7 @@ namespace Task02
             {
                 throw new ArgumentException();
             }
-            return state1.Population/state1.Area > state2.Population/state2.Area;
+            return state1.Population/state1.Area < state2.Population/state2.Area;
         }
         public static bool operator <(State state1, State state2)
         {
@@ -54,7 +54,7 @@ namespace Task02
             {
                 throw new ArgumentException();
             }
-            return state1.Population / state1.Area < state2.Population / state2.Area;
+            return state1.Population / state1.Area > state2.Population / state2.Area;
         }
         public override string ToString()
         {

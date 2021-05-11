@@ -30,6 +30,15 @@ namespace Task03
     class Clock
     {
         public int Hours { get; set; }
+
+        public static implicit operator Clock(int minute)
+        {
+            return new Clock { Hours = minute/60 };
+        }
+        public static explicit operator int(Clock clock)
+        {
+            return clock.Hours*60;
+        }
     }
 
     class MainClass
@@ -40,14 +49,13 @@ namespace Task03
             try
             {
                 Clock clock = new Clock { Hours = int.Parse(Console.ReadLine()) };
+                Console.WriteLine((Clock)minute);
+                Console.WriteLine((int)clock);
             }
             catch (ArgumentException)
             {
                 Console.WriteLine("error");
-            }
-
-            Console.WriteLine((Clock)minute);
-            Console.WriteLine((int)clock);
+            }            
         }
     }
 }

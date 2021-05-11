@@ -33,11 +33,19 @@ namespace Task03
 
         public static implicit operator Clock(int minute)
         {
-            return new Clock { Hours = minute/60 };
+            return new Clock { Hours = minute / 60 };
         }
         public static explicit operator int(Clock clock)
         {
-            return clock.Hours*60;
+            if (clock.Hours < 0)
+            {
+                throw new ArgumentException();
+            }
+            return clock.Hours * 60;
+        }
+        public override string ToString()
+        {
+            return $"{this.Hours}";
         }
     }
 
@@ -55,7 +63,7 @@ namespace Task03
             catch (ArgumentException)
             {
                 Console.WriteLine("error");
-            }            
+            }
         }
     }
 }

@@ -37,7 +37,7 @@ namespace Task03
         }
         public static explicit operator int(Clock clock)
         {
-            if (clock.Hours < 0)
+            if (clock.Hours <= 0)
             {
                 throw new ArgumentException();
             }

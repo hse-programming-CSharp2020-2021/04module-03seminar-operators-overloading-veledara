@@ -39,7 +39,87 @@ public readonly struct Fraction
         den = denominator;
     }
 
-    public override string ToString() => $"{num}/{den}";
+    public static int GetNODRecurs(int val1, int val2)
+    {
+        if (val2 == 0)
+            return val1;
+        else
+            return GetNODRecurs(val2, val1 % val2);
+    }
+    public static Fraction Parse(string input)
+    {
+        string[] mas = input.Split('/');
+        if (mas.Length > 1)
+        {
+            return new Fraction(Convert.ToInt32(mas[0]), Convert.ToInt32(mas[1]));
+        }
+        else
+        {
+            return new Fraction(Convert.ToInt32(mas[0]), 1);
+        }
+    }
+    public static Fraction operator +(Fraction c1, Fraction c2)
+    {
+        int nod = GetNODRecurs(c1.den, c2.den);
+        int nok = (c1.den * c2.den) / nod;
+        int newnum = c1.num * (nok / c1.den) + c2.num * (nok / c2.den);
+        int newden = nok;
+        int newnod = GetNODRecurs(newnum, newden);
+        if (newnum == 0)
+        {
+            return new Fraction(newnum, 1);
+        }
+        return new Fraction(newnum / newnod, newden / newnod);
+    }
+    public static Fraction operator -(Fraction c1, Fraction c2)
+    {
+        int nod = GetNODRecurs(c1.den, c2.den);
+        int nok = (c1.den * c2.den) / nod;
+        int newnum = c1.num * (nok / c1.den) - c2.num * (nok / c2.den);
+        int newden = nok;
+        int newnod = GetNODRecurs(newnum, newden);
+        if (newnum == 0)
+        {
+            return new Fraction(newnum, 1);
+        }
+        return new Fraction(newnum / newnod, newden / newnod);
+    }
+    public static Fraction operator *(Fraction c1, Fraction c2)
+    {
+        int newnum = c1.num * c2.num;
+        int newden = c1.den * c2.den;
+        int nod = GetNODRecurs(newnum, newden);
+        if (newnum == 0)
+        {
+            return new Fraction(newnum, 1);
+        }
+        return new Fraction(newnum / nod, newden / nod);
+    }
+    public static Fraction operator /(Fraction c1, Fraction c2)
+    {
+        if (c2.num==0 || c2.den == 0)
+        {
+            throw new DivideByZeroException();
+        }
+        int newnum = c1.num * c2.den;
+        int newden = c1.den * c2.num;
+        int nod = GetNODRecurs(newnum, newden);
+        if (newnum == 0)
+        {
+            return new Fraction(newnum, 1);
+        }
+        return new Fraction(newnum / nod, newden / nod);
+    }
+    public override string ToString()
+    {
+        if (den == 1)
+            return num.ToString();
+        if (den < 0)
+        {
+            return "-" + num + "/" + (-den);
+        }
+        return num + "/" + den;
+    }
 }
 
 public static class OperatorOverloading
@@ -48,7 +128,12 @@ public static class OperatorOverloading
     {
         try
         {
-            
+            Fraction a = Fraction.Parse(Console.ReadLine());
+            Fraction b = Fraction.Parse(Console.ReadLine());
+            Console.WriteLine(a + b);
+            Console.WriteLine(a - b);
+            Console.WriteLine(a * b);
+            Console.WriteLine(a / b);
         }
         catch (ArgumentException)
         {
